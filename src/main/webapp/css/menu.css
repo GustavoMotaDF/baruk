@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17/12/2020, 15:29:00
+    Author     : onitel
+*/
+
+
+.item{
+    background-color: transparent;
+     border-radius: 50%;
+}
+.item:hover{
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    opacity: 0.8;    
+}
+.itemms{
+   
+    border: 2px solid;
+    
+}
+.itemm:hover{
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+}

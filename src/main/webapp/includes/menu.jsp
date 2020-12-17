@@ -15,19 +15,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/">Inicio</a>
+                    <a class="nav-link active item" aria-current="page" href="${pageContext.request.contextPath}/">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="${pageContext.request.contextPath}/Empresas">Empresas</a>
+                    <a class="nav-link active item" href="${pageContext.request.contextPath}/Empresas">Empresas</a>
                 </li>
-                <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown items ">
+                    <a class="nav-link dropdown-toggle active item" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Sobre Nós
                     </a>
-                    <ul class="dropdown-menu active" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="${pageContext.request.contextPath}/Historia">História</a></li>
-                        <li><a class="dropdown-item" href="${pageContext.request.contextPath}/Missao">Missão</a></li>
-                        <li><a class="dropdown-item" href="${pageContext.request.contextPath}/Contate-nos">Contate-nos</a></li>
+                    <ul class="dropdown-menu active itemms" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item itemm" href="${pageContext.request.contextPath}/Historia">História</a></li>
+                        <li><a class="dropdown-item itemm" href="${pageContext.request.contextPath}/Missao">Missão</a></li>
+                        <li><a class="dropdown-item itemm" href="${pageContext.request.contextPath}/Contate-nos">Contate-nos</a></li>
                     </ul>
                 </li>
             </ul>
