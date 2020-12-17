@@ -8,10 +8,8 @@ and open the template in the editor.
     Author     : alephtav
 */
 
-body{
-  
-    margin: 0 0 1.5%; /* altura do seu footer */
-
+body{  
+    margin: 0 0 1.5%; /* altura do seu footer */    
 }
 .footer{
     position: fixed;
@@ -24,7 +22,12 @@ body{
     color: white;
 }
 .titulo{
-    font-family: 'Andika New Basic', sans-serif;        
+    font-family: 'Andika New Basic', sans-serif;     
+    text-shadow: #000 2px 3px 2px;
+    color: black;
+}
+.titulo:hover{
+    color:#282a35 ;
 }
 .comfortaa{
     font-family: 'Comfortaa', cursive;
