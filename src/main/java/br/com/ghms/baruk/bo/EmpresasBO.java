@@ -43,12 +43,12 @@ public class EmpresasBO {
         empresas.setEmpresa(empresa);
         empresas.setDescricao(descricao);
         empresas.setLink(link);
-
+        em.persist(empresas);
         em.getTransaction().commit();
 
         em.clear();
         em.close();
-
+        
     }
 
     public void AlterarEmpresa(String idempresa, String empresa, String descricao, String link) {

@@ -4,6 +4,8 @@
     Author     : onitel
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%-- 
     Document   : index
     Created on : 16/12/2020, 14:48:47
@@ -31,6 +33,49 @@
                     <li class="breadcrumb-item active" aria-current="page">Empresas</li>
                 </ol>
             </nav>
+
+            <div>
+
+                <div class="foo" id="foo"> 
+                    ${mensagemSucesso}
+                    ${mensagemErro}
+                </div>
+                <script>
+                    $(document).ready(function () {
+                        setTimeout(function () {
+                            $('#foo').hide();
+                            $('.foo').hide();
+                        }, 10000);
+                    });
+                </script>
+            </div>
+
+
+            <form action="${pageContext.request.contextPath}/Empresas" method="post">
+                <c:if test="${empty empresaeditando}">
+                      Empresa :  <input type="text" name="empresa" placeholder="Empresa"/><br>
+                Descrição :  <input type="text" name="descricao" placeholder="Descrição"/><br>
+                Link :  <input type="text" name="link" placeholder="Link"/>   
+                    
+                </c:if>
+                     
+                
+                <input class="btn btn-outline-danger" type="submit" name="cadastrar"/><br>
+                <button type="reset" class="btn btn-outline-danger">Cancelar</button>
+            </form> 
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="container bg-secondary">
                 <br>
                 <div class="row">
