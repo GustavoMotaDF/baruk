@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/12/2020, 23:07:35
+    Author     : alephtav
+*/
+
+body{
+  
+    margin: 0 0 1.5%; /* altura do seu footer */
+
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    width:100%;   
+    font-size: small;
+}
+.zinza-rodape{
+    background-color: #282a35;
+    color: white;
+}
+.titulo{
+    font-family: 'Andika New Basic', sans-serif;        
+}
+.comfortaa{
+    font-family: 'Comfortaa', cursive;
+}
