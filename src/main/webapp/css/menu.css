@@ -11,12 +11,11 @@ and open the template in the editor.
 
 .item{
     background-color: transparent;
-     border-radius: 50%;
+    
 }
 .item:hover{
     background-color: white;
-    color: black;
-    border-radius: 50%;
+    color: red;
     opacity: 0.8;    
 }
 .itemms{
@@ -27,5 +26,4 @@ and open the template in the editor.
 .itemm:hover{
     background-color: black;
     color: white;
-    border-radius: 50%;
 }

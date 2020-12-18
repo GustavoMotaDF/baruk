@@ -22,7 +22,7 @@
 <html lang="en" class="no-js">
     <head>
         <title>Baruk: Empresas</title>
-        <jsp:include page="../includes/css.jsp"/>
+        <jsp:include page="../includes/head.jsp"/>
     </head>
     <body>       
         <jsp:include page="../includes/menu.jsp"/>
@@ -33,76 +33,76 @@
                     <li class="breadcrumb-item active" aria-current="page">Empresas</li>
                 </ol>
             </nav>
+            <br>
+            <div class="position-relative">
+                <div class="position-absolute top-0 start-100 translate-middle">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary float" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fas fa-plus"></i>
+                    </button>
 
-            <div>
-
-                <div class="foo" id="foo"> 
-                    ${mensagemSucesso}
-                    ${mensagemErro}
                 </div>
-                <script>
-                    $(document).ready(function () {
-                        setTimeout(function () {
-                            $('#foo').hide();
-                            $('.foo').hide();
-                        }, 10000);
-                    });
-                </script>
+
             </div>
 
 
+
+            <!-- Modal -->
             <form action="${pageContext.request.contextPath}/Empresas" method="post">
                 <c:if test="${empty empresaeditando}">
-                      Empresa :  <input type="text" name="empresa" placeholder="Empresa"/><br>
-                Descrição :  <input type="text" name="descricao" placeholder="Descrição"/><br>
-                Link :  <input type="text" name="link" placeholder="Link"/>   
-                    
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Adicionar Empresa</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body form">
+                                    <input type="text" class="form-control" name="empresa" placeholder="Empresa"/><br>
+                                    <input type="text" class="form-control" name="descricao" placeholder="Descrição"/><br>
+                                    <input type="text" class="form-control"  name="link" placeholder="Link"/>   
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>       
+                                    <input class="btn btn-outline-success" type="submit" name="cadastrar" value="Cadastrar"/><br>
+                                    <button type="reset" class="btn btn-outline-danger">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </c:if>
-                     
-                
-                <input class="btn btn-outline-danger" type="submit" name="cadastrar"/><br>
-                <button type="reset" class="btn btn-outline-danger">Cancelar</button>
             </form> 
 
 
-
-
-
-
-
-
-
-
-
-
-
-            <div class="container bg-secondary">
-                <br>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Art Baruk Crô</h5>
-                                <p class="card-text">Empresa comandada por Nina Baruk, a renomada Sr. Baruk. Empresas do ramo Têxtil. </p>
-                                <a href="#" class="btn btn-primary">Visite o Site.</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Salão Marina Vasconcelos</h5>
-                                <p class="card-text">Empresa comanada pela renomada Design de sobrancelhas, Marina Beatriz.  Empresa do ramo de Beleza.</p>
-                                <a href="#" class="btn btn-primary">Visite o Site.</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
+            <div class="foo alert alert-info" role="alert" id="foo"> 
+                ${mensagemSucesso}
+                ${mensagemErro}
             </div>
+            <hr>
+
+            <c:forEach var="empresas" items="${empresas}">
+                <div class="container bg-secondary"><br>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">${empresas.empresa}</h5>
+                                    <p class="card-text">${empresas.descricao}</p>
+                                    <a href="https://${empresas.link}" target="_blank" class="btn btn-primary">Visite o site - ${empresas.link}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+            </c:forEach>                                
+
+
+
+
+
+
         </div><!-- /container -->
         <jsp:include page="../includes/rodape.jsp"/>       
     </body>

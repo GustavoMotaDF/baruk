@@ -36,21 +36,19 @@ public class empresas extends HttpServlet {
                 req.setAttribute("mensagemErro", "Erro ao adicionar a empresa" + e.getMessage());
             }
 
-        }
-        
-        else if(Objects.nonNull(req.getParameter("editar"))){
+        } else if (Objects.nonNull(req.getParameter("editar"))) {
             //Tratando editar
-            req.setAttribute("empresaeditando",empresaBO.getEmpresa(req.getParameter("idempresa")));
+            req.setAttribute("empresaeditando", empresaBO.getEmpresa(req.getParameter("idempresa")));
         }
-        
-        try{
-            
-            req.setAttribute("empresas",empresaBO.getEmpresas());   
-        
-        }catch(Exception e){
-            
-            req.setAttribute("mensagemErro","Sem empresas cadastradas!");
-                
+
+        try {
+
+            req.setAttribute("empresas", empresaBO.getEmpresas());
+
+        } catch (Exception e) {
+
+            req.setAttribute("mensagemErro", "Sem empresas cadastradas!");
+
         }
 
         req.getRequestDispatcher("/paginas/empresas.jsp").forward(req, resp);
@@ -58,14 +56,14 @@ public class empresas extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        try{
-            
-            req.setAttribute("empresas",empresaBO.getEmpresas());   
-        
-        }catch(Exception e){
-            
-            req.setAttribute("mensagemErro","Sem empresas cadastradas!");
-                
+        try {
+
+            req.setAttribute("empresas", empresaBO.getEmpresas());
+
+        } catch (Exception e) {
+
+            req.setAttribute("mensagemErro", "Sem empresas cadastradas!");
+
         }
 
         req.getRequestDispatcher("/paginas/empresas.jsp").forward(req, resp);

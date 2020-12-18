@@ -8,6 +8,8 @@ package br.com.ghms.baruk.entidade;
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
@@ -16,12 +18,14 @@ import javax.persistence.Id;
  */
 @Entity
 public class Empresas implements Serializable {
+
     @Id
-   private Long idempresa;
-   private String empresa;
-   private String descricao;
-   private String link;   
-   private Boolean ativo;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idempresa;
+    private String empresa;
+    private String descricao;
+    private String link;
+    private Boolean ativo;
 
     public Long getId() {
         return idempresa;
@@ -87,8 +91,5 @@ public class Empresas implements Serializable {
         }
         return true;
     }
-    
-   
-   
-    
+
 }

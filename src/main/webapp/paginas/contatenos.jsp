@@ -9,7 +9,7 @@
 <html lang="en" class="no-js">
     <head>
         <title>Baruk: Contate-nos</title>
-        <jsp:include page="../includes/css.jsp"/>
+        <jsp:include page="../includes/head.jsp"/> 
     </head>
     <body>       
         <jsp:include page="../includes/menu.jsp"/>

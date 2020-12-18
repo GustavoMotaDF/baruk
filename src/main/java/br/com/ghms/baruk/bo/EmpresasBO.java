@@ -20,7 +20,7 @@ public class EmpresasBO {
     private static final EntityManagerFactory emf
             = Persistence.createEntityManagerFactory("barukpu");
 
-    public List<Empresas> getEmpresas() {
+    public List<Empresas> getEmpresas() throws Exception {
         List<Empresas> empresas;
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
@@ -30,7 +30,10 @@ public class EmpresasBO {
 
         em.clear();
         em.close();
-
+        
+        if(empresas.equals("") || empresas.isEmpty()){
+            throw new Exception("Sem empresas cadastradas!");
+        }
         return empresas;
     }
 
@@ -43,6 +46,7 @@ public class EmpresasBO {
         empresas.setEmpresa(empresa);
         empresas.setDescricao(descricao);
         empresas.setLink(link);
+        empresas.setAtivo(Boolean.TRUE);
         em.persist(empresas);
         em.getTransaction().commit();
 
