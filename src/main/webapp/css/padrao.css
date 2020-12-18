@@ -9,8 +9,24 @@ and open the template in the editor.
 */
 
 body{  
-    margin: 0 0 1.5%; /* altura do seu footer */    
+    margin: 0 0 1.5%; /* altura do seu footer */   
+
 }
+
+body::after {
+    content: "";
+    background: url( ../img/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
 .footer{
     position: fixed;
     bottom: 0;
@@ -32,3 +48,4 @@ body{
 .comfortaa{
     font-family: 'Comfortaa', cursive;
 }
+
