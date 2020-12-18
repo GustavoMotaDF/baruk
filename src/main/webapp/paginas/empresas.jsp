@@ -34,64 +34,12 @@
                 </ol>
             </nav>
             <br>
-            <div class="position-relative">
-                <div class="position-absolute top-0 start-100 translate-middle">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary float" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <i class="fas fa-plus"></i>
-                    </button>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Modal -->
-            <form action="${pageContext.request.contextPath}/Empresas" method="post">
-                <c:if test="${empty empresaeditando}">
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Adicionar Empresa</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body form">
-                                    <input type="text" class="form-control" name="empresa" placeholder="Empresa"/><br>
-                                    <input type="text" class="form-control" name="descricao" placeholder="Descrição"/><br>
-                                    <input type="text" class="form-control"  name="link" placeholder="Link"/>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <input class="btn btn-outline-success" type="submit" name="cadastrar" value="Cadastrar"/><br>
-                                    <button type="reset" class="btn btn-outline-danger">Cancelar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </c:if>
-            </form>
-
-            <div class="position-relative">
-                <div class="position-absolute bottom-0 end-0">
- 
-                    <div class="alert alert-warning alert-dismissible fade show foo" role="alert">
-                        ${mensagemSucesso}
-                        ${mensagemErro}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
+            <%-- INCLUDE DA FUNÇÃO CADASTRAR EMPRESA--%>
+            <jsp:include page="../includes/logado/cadempresa.jsp"/>
+          
+           
         </div>
-
         <br>
-
         <c:forEach var="empresas" items="${empresas}">
             <div class="container bg-secondary">
                 <br>
@@ -101,21 +49,14 @@
                             <div class="card-body">
                                 <h5 class="card-title">${empresas.empresa}</h5>
                                 <p class="card-text">${empresas.descricao}</p>
-                                <a href="https://${empresas.link}" target="_blank" class="btn btn-primary">Visite o site - ${empresas.link}</a>
+                                <a href="http://${empresas.link}" target="_blank" class="btn btn-primary">Visite o site - ${empresas.link}</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <hr>
             </div>
-
-
         </c:forEach>
-
-
-
-
-
 
     </div><!-- /container -->
     <jsp:include page="../includes/rodape.jsp"/>

@@ -22,51 +22,59 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "empresas", urlPatterns = {"/Empresas"})
 public class empresas extends HttpServlet {
 
+    //CRIA INSTANCIA DO EMPRESABO
     private EmpresasBO empresaBO = new EmpresasBO();
 
+    
+    //POST
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        //CADASTRAR EMPRESA AO CLICAR EM CADASTRAR NO JSP
         if (Objects.nonNull(req.getParameter("cadastrar"))) {
             try {
+                //CAPTURA OS PARAMETROS RECEBIDOS PELO FORM, METODO POST, DO JSP
                 empresaBO.IncluirEmpresa(req.getParameter("empresa"), req.getParameter("descricao"), req.getParameter("link"));
 
                 req.setAttribute("mensagemSucesso", "Empresa Adicionada com sucesso!");
             } catch (Exception e) {
+                //MENSAGEM DE ERRO
                 req.setAttribute("mensagemErro", "Erro ao adicionar a empresa" + e.getMessage());
             }
-
+          //SELECIONAR ITEM PARA EDITAR
         } else if (Objects.nonNull(req.getParameter("editar"))) {
             //Tratando editar
             req.setAttribute("empresaeditando", empresaBO.getEmpresa(req.getParameter("idempresa")));
         }
 
         try {
-
+            //LISTAR EMPRESAS CADASTRADAS
             req.setAttribute("empresas", empresaBO.getEmpresas());
 
         } catch (Exception e) {
-
+            //MENSAGEM DE ERRO
             req.setAttribute("mensagemErro", "Sem empresas cadastradas!");
 
         }
-
+        
+        
+        //REDIRECIONA PARA O JSP CORRESPONDENTE A SERVLET
         req.getRequestDispatcher("/paginas/empresas.jsp").forward(req, resp);
     }
 
+    
+    //GET
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-
+            //LISTAR EMPRESAS CADASTRADAS ASO ENTRAR NA PAGINA
             req.setAttribute("empresas", empresaBO.getEmpresas());
-            req.setAttribute("mensagemSucesso", "OLÁAA");
+            req.setAttribute("mensagemSucesso", ":)");
 
         } catch (Exception e) {
-
+            //MENSAGEM DE ERRO
             req.setAttribute("mensagemErro", "Sem empresas cadastradas!");
-
         }
-
+        //REDIRECIONA PARA O JSP CORRESPONDENTE A SERVLET
         req.getRequestDispatcher("/paginas/empresas.jsp").forward(req, resp);
     }
 
