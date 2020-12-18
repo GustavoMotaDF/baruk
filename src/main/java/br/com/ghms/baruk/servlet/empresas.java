@@ -59,6 +59,7 @@ public class empresas extends HttpServlet {
         try {
 
             req.setAttribute("empresas", empresaBO.getEmpresas());
+            req.setAttribute("mensagemSucesso", "OLÁAA");
 
         } catch (Exception e) {
 
