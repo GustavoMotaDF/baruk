@@ -27,7 +27,8 @@ public class EmpresasBO {
 
         empresas = em.createQuery("from Empresas where ativo = 1").getResultList();
         em.getTransaction().commit();
-
+        
+        em.refresh(empresas);
         em.clear();
         em.close();
         

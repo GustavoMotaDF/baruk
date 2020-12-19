@@ -3,6 +3,7 @@
     Created on : 16/12/2020, 14:56:05
     Author     : onitel
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
 

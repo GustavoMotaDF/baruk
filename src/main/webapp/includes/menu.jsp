@@ -44,6 +44,9 @@
                 <li class="nav-item">
                     <a class="nav-link active item" aria-current="page" href="#"><i class="fas fa-user"></i> Usuário</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active item" aria-current="page" href="${pageContext.request.contextPath}/CaixaDeMensagens"><i class="fas fa-user"></i> Caixa de Mensagens</a>
+                </li>
             </ul>
 
             
