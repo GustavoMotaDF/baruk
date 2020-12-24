@@ -22,27 +22,46 @@
             </nav>
             <br>
              
+            <style>
+                .cores{
+                     background-color: black;
+                     background-image: linear-gradient( to right, #F0F8FF ,#FFFAF0 , #F5F5F5 ); 
+                }
+                .borda{
+                    border: solid 0.5px black;
+                    border-radius: 20%;
+                    padding: 5px;
+                }
+               
+            </style>
+                
             <form class="row bg-light">
-                <div class=""><</div>
+                <div class="col-md-12 text-center cores">
+                    <br>
+                    <h2>Contate-nos</h2>
+                    <hr>
+                    <p>Envie-nos uma mensagem! <br>Opinião, sujestão, reclamações!</p>                    
+                    <hr>
+                    <br>                    
+                    
+                </div>
                 <div class="col-md-6">
-                    <label for="inputnomr" class="form-label">Nome</label>
+                    <label for="inputnomr" class="form-label borda cores">Nome</label>
                     <input type="text" class="form-control" id="inputnome" placeholder="Nina Baruk">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputtelefone" class="form-label">Telefone</label>
+                    <label for="inputtelefone" class="form-label borda cores">Telefone</label>
                     <input type="tel" class="form-control" id="inputtelefone " placeholder=" 99 9 9999-9999">
                     <br>
-                </div>
-                
+                </div>                
                 <div class="col-12">
-                    <label for="inputemail" class="form-label">Email</label>
+                    <label for="inputemail" class="form-label borda cores">Email</label>
                     <input type="email" class="form-control" id="inputemail" placeholder="baruk@grupobaruk.com.br">
                     <br>
                 </div>
                 <div class="col-12">
-                    <label for="inputAddress2" class="form-label">Sua mensagem</label>
-                    <textarea placeholder="Digite sua mensagem, contendo o maior numero de detalhes possivel" class="form-control"></textarea>
-
+                    <label for="inputAddress2" class="form-label borda cores">Sua mensagem</label>
+                    <textarea placeholder="Digite sua mensagem, contendo o maior numero de detalhes possivel" maxlength="2400" class="form-control"></textarea>
                     <br>
                     <br>
 
