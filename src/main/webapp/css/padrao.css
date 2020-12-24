@@ -18,7 +18,7 @@ body::after {
     background: url( ../img/fundo.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    opacity: 0.3;
+    opacity: 0.2;
     top: 0;
     left: 0;
     bottom: 0;
@@ -26,6 +26,16 @@ body::after {
     position: absolute;
     z-index: -1;   
 }
+
+@media (max-width: 700px) {        
+    body::after {
+        background: url( ../img/fundo.jpg);
+        background-repeat: no-repeat;
+        background-size: 300%;
+    }
+}
+
+
 
 .footer{
     position: fixed;
@@ -51,4 +61,6 @@ body::after {
 .bordaredonda{
     border-radius: 10%;
 }
+
+
 

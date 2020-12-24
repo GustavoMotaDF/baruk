@@ -6,7 +6,8 @@
 
 
 <style>
-
+    
+    
     .container2 {
         width:100%;
         text-align:center;
@@ -25,6 +26,18 @@
     .right {
         float:right;
         
+    }
+    
+    
+    @media (max-width: 576px) {        
+        .container2{
+            font-size: 9px;
+        }
+    }
+     @media (max-width: 320px) {        
+        .container2{
+            font-size: 7px;
+        }
     }
 
 

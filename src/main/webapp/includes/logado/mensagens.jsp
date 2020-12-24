@@ -4,83 +4,55 @@
     Author     : onitel
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-    <head>         
-        <jsp:include page="../includes/head.jsp"/>   
-        <title>Baruk</title>
+    <head>
+        <title>Baruk: Contate-nos</title>
+        <jsp:include page="../head.jsp"/> 
     </head>
-    <body>              
-        <jsp:include page="../includes/menu.jsp"/>           
-        <div class="container">
+    <body>       
+        <jsp:include page="../menu.jsp"/>
+        <div class="container ">
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Mensagens</li>
+                </ol>
+            </nav>
             <br>
-            <div class="row text-center">
-                <div class="col-md-3 float-left ">
-                    <div class="card bordaredonda">
-                        <div class="card-body ">
+            <table class="table table-hover">
 
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>                            
-                    </div>
-                </div>
-                <div class="col-md-3 float-left">
-                    <div class="card bordaredonda">
-                        <div class="card-body bordaredonda">
-
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>                            
-                    </div>
-                </div>
-                <div class="col-md-3 float-left">
-                    <div class="card bordaredonda">
-                        <div class="card-body bordaredonda">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>                            
-                    </div>
-                </div>
-                <div class="col-md-3 float-left">
-                    <div class="card bordaredonda">
-                        <div class="card-body bordaredonda">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>                            
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-12 float-left">
-                    <div class="card bordaredonda">
-                        <div class="card-body bordaredonda">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>                            
-                    </div>
-                </div>
-            </div>
-
-        </div>              
-
-        <jsp:include page="includes/rodape.jsp"/>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!-- /container -->
+        <jsp:include page="../rodape.jsp"/>       
     </body>
-
-    <jsp:include page="includes/js.jsp"/>
+    <jsp:include page="../js.jsp"/>
 </html>

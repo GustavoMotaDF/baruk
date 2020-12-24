@@ -24,18 +24,19 @@ public class EmpresasBO {
         List<Empresas> empresas;
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-
+        
         empresas = em.createQuery("from Empresas where ativo = 1").getResultList();
         em.getTransaction().commit();
         
-        em.refresh(empresas);
         em.clear();
         em.close();
         
         if(empresas.equals("") || empresas.isEmpty()){
             throw new Exception("Sem empresas cadastradas!");
         }
+
         return empresas;
+        
     }
 
     public void IncluirEmpresa(String empresa, String descricao, String link) {
