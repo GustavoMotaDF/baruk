@@ -47,7 +47,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">${empresas.empresa}</h5>
                                 <p class="card-text">${empresas.descricao}</p>
-                                <a href="http://${empresas.link}" target="_blank" class="btn btn-primary">Visite o site - ${empresas.link}</a>
+                                <a href=" ${empresas.link}" target="_blank" class="btn btn-primary">Visite o site - ${empresas.link}</a>
                             </div>
                         </div>
                     </div>

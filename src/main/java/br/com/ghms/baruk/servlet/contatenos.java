@@ -7,6 +7,7 @@ package br.com.ghms.baruk.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Objects;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,10 +20,18 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "contatenos", urlPatterns = {"/Contate-nos"})
 public class contatenos extends HttpServlet {
-
+    
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+           if (Objects.nonNull(req.getParameter("enviar"))) {
+               
+           
+           }
+        
+        
+        
          req.getRequestDispatcher("/paginas/contatenos.jsp").forward(req, resp);
     }
 
