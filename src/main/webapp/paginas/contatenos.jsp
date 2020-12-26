@@ -35,33 +35,35 @@
                
             </style>
                 
-            <form class="row bg-light">
+            <form class="row bg-light" method="post" action="${pageContext.request.contextPath}/Contate-nos">
                 <div class="col-md-12 text-center cores">
                     <br>
                     <h2>Contate-nos</h2>
                     <hr>
-                    <p>Envie-nos uma mensagem! <br>Opinião, sujestão, reclamações!</p>                    
+                    <p>Envie-nos uma mensagem! <br>Opinião, sujestão, reclamações!</p>     
+                     ${mensagemErro}
+                     ${mensagemSucesso}
                     <hr>
                     <br>                    
                     
                 </div>
                 <div class="col-md-6">
-                    <label for="inputnomr" class="form-label borda cores">Nome</label>
-                    <input type="text" class="form-control" id="inputnome" placeholder="Nina Baruk">
+                    <label for="inputnome" class="form-label borda cores">Nome</label>
+                    <input type="text" name="nome"class="form-control" id="inputnome" placeholder="Nina Baruk">
                 </div>
                 <div class="col-md-6">
                     <label for="inputtelefone" class="form-label borda cores">Telefone</label>
-                    <input type="tel" class="form-control" id="inputtelefone " placeholder=" 99 9 9999-9999">
+                    <input type="tel" name="telefone" class="form-control" id="inputtelefone " placeholder=" 99 9 9999-9999">
                     <br>
                 </div>                
                 <div class="col-12">
                     <label for="inputemail" class="form-label borda cores">Email</label>
-                    <input type="email" class="form-control" id="inputemail" placeholder="baruk@grupobaruk.com.br">
+                    <input type="email"name="email" class="form-control" id="inputemail" placeholder="baruk@grupobaruk.com.br">
                     <br>
                 </div>
                 <div class="col-12">
                     <label for="inputAddress2" class="form-label borda cores">Sua mensagem</label>
-                    <textarea placeholder="Digite sua mensagem, contendo o maior numero de detalhes possivel" maxlength="2400" class="form-control"></textarea>
+                    <textarea placeholder="Digite sua mensagem, contendo o maior numero de detalhes possivel" maxlength="2400" class="form-control" name="mensagem"></textarea>
                     <br>
                     <br>
 
@@ -73,7 +75,7 @@
                         <button type="reset" class="btn btn-warning form-control">Cancelar</button>
                     </div>
                     <div class="col-md-3">
-                        <button type="submit" class="btn btn-primary form-control">Enviar</button>
+                        <button type="submit" name="enviar" class="btn btn-primary form-control">Enviar</button>
                     </div>
                     <div class="col-md-3">
                     </div> 

@@ -21,35 +21,23 @@
                 </ol>
             </nav>
             <br>
-            <table class="table table-hover">
-
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
+            <table class="table table-hover card">
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Mensagem</th>
+                </tr>
+                 <c:forEach var="contatenos" items="${contatenos}">               
+                   
+                        <tr>
+                            <td>${contatenos.nome}</td>
+                            <td>${contatenos.telefone}</td>
+                            <td>${contatenos.email}</td>
+                            <td>${contatenos.mensagem}</td>
+                        </tr>                                               
+                
+                  </c:forEach>   
             </table>
         </div><!-- /container -->
         <jsp:include page="../rodape.jsp"/>       
